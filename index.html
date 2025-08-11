@@ -707,24 +707,14 @@
 
     // بيانات افتراضية
     const SAMPLE = [
-      { 
-        id: 'p1', 
-        name: 'أحمد علي', 
-        phone: '07701234567', 
-        dob: '1990-05-12', 
-        status: 'New', 
-        lastVisit: null, 
-        notes: 'حساسية في الأسنان الأمامية', 
-        fees: 0, 
-        appointments: [] 
-      },
+      
       { 
         id: 'p2', 
-        name: 'سارة محمود', 
-        phone: '07807654321', 
-        dob: '1985-11-03', 
+        name: 'زيد علي ', 
+        phone: '07748076476', 
+        dob: '2002-5-20', 
         status: 'Returning', 
-        lastVisit: '2025-07-02', 
+        lastVisit: '2025-8-1', 
         notes: '', 
         fees: 50000, 
         appointments: [
@@ -798,10 +788,10 @@
     
     function applySettings() {
       // تطبيق السمة المختارة
-      document.body.className = `theme-${appSettings.theme}`;
+      document.body.className = theme-${appSettings.theme};
       
       // تطبيق حجم الخط
-      document.documentElement.style.setProperty('--font-size', `${appSettings.fontSize}px`);
+      document.documentElement.style.setProperty('--font-size', ${appSettings.fontSize}px);
       
       // تطبيق الوضع الليلي إذا كان مفعلاً
       if (appSettings.nightMode) {
@@ -894,7 +884,7 @@
       });
 
       // تحديث الإحصائيات
-      countEl.textContent = `(${visible.length})`;
+      countEl.textContent = (${visible.length});
       totalPatientsEl.textContent = patients.length;
       totalFeesEl.textContent = patients.reduce((s,p)=>s+(p.fees||0),0);
       const today = new Date().toISOString().slice(0,10);
