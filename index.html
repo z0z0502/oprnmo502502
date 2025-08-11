@@ -475,6 +475,24 @@
       border-top: 1px solid var(--border-color);
     }
     
+    /* زر المطور */
+    .developer-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-right: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    
+    .developer-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
     /* responsive adjustments */
     @media(max-width:980px){
       .grid{
@@ -663,6 +681,7 @@
     <!-- حقوق الطبع والنشر -->
     <div class="copyright">
       جميع الحقوق محفوظة &copy; زيد علي العلي 2026
+      <button id="developerBtn" class="developer-btn">👨‍💻 زيارة صفحة المطور</button>
     </div>
 
     <!-- modal root -->
@@ -680,10 +699,17 @@
 
     // بيانات افتراضية
     const SAMPLE = [
-      
+     
 
 
 
+
+            id:'a1', 
+            datetime:'2025-08-15T10:00', 
+            reason:'تنظيف'
+          }
+        ] 
+      }
     ];
     const STORAGE_KEY = 'dental_patients_v1';
     const SETTINGS_KEY = 'dental_settings_v1';
@@ -1228,6 +1254,12 @@
       saveSettings();
       settingsMenu.classList.remove('show');
       alert('تم حفظ الإعدادات بنجاح');
+    };
+
+    // زر الانتقال إلى صفحة المطور
+    document.getElementById('developerBtn').onclick = function() {
+      // يمكنك استبدال الرابط برابط المطور الفعلي
+      window.open('https://ornmo502.wordpress.com/', '_blank');
     };
 
     // بدء التطبيق
