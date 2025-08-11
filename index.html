@@ -480,12 +480,15 @@
       background: var(--primary);
       color: white;
       border: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-      margin-right: 10px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      margin: 0 10px;
       cursor: pointer;
       font-size: 14px;
       transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
     
     .developer-btn:hover {
@@ -539,6 +542,11 @@
       }
       .modal-actions button {
         width: 100%;
+      }
+      .developer-btn {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
       }
     }
     @media(max-width:480px){
@@ -699,9 +707,7 @@
 
     // بيانات افتراضية
     const SAMPLE = [
-     
-
-
+    
 
 
             id:'a1', 
@@ -1256,7 +1262,6 @@
       alert('تم حفظ الإعدادات بنجاح');
     };
 
-   
     // زر الانتقال إلى صفحة المطور
     document.getElementById('developerBtn').onclick = function() {
       window.open('https://ornmo502.wordpress.com/', '_blank');
